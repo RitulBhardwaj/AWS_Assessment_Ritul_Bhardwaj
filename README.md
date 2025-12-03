@@ -1,1 +1,3 @@
 # AWS_Assessment_Ritul_Bhardwaj
+
+I designed a custom VPC with the CIDR block 10.0.0.0/16 to provide enough private IP space for future expansion. Inside the VPC, I created two public subnets across different Availability Zones to support high availability and resources that require internet access (IGW + NAT Gateway). I also created two private subnets for secure backend services such as EC2 or databases, which should not be directly exposed to the internet. A NAT Gateway was placed in Public Subnet-1 to allow private resources outbound internet access. Separate route tables were configured for Public and Private subnets to control traffic flow correctly.
